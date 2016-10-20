@@ -1,0 +1,41 @@
+<html>
+
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <title>TinyURL</title>
+        <!-- AngularJS CDN 必须放在head, 否则写的网页不能加载 -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-resource.min.js"></script>
+        <script src="/node_modules/chart.js/dist/Chart.min.js"></script>
+        <script src="/node_modules/angular-chart.js/dist/angular-chart.min.js"></script>
+        <script src="/public/js/app.js"></script>
+        <script src = "public/js/controllers/homeController.js"></script>
+        <script src = "public/js/controllers/urlController.js"></script>
+
+        <!-- Bootstrap CDN, 可以放到body最后。结果就是网站先显示内容然后再用bootstrap渲染-->
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    </head>
+
+    <body ng-app="tinyurlApp">
+        <header>
+            <div class="container">
+                <nav class="navbar navbar-default">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="#/">TinyURL</a>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <!--为了共用一个header，我们在此处嵌入不同的内容。共用上面的header。-->
+        <div class = "container">
+            <div ng-view></div>
+        </div>
+    </body>
+
+
+</html>
