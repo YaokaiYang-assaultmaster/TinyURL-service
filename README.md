@@ -10,16 +10,17 @@
 
 2. Clone code to your local server using `git clone https://github.com/YaokaiYang-assaultmaster/TinyURL-service`.
 
-### Congiguration
+### Configuration
 
-    It's brainless! Just clone the repository and run!
+
+It's brainless! Just clone the repository and run!
 
 ### Usage
 
-    Change your directory to `Tiny URL service` and run the following command:
+Change your directory to `Tiny URL service` and run the following command:
     
-    `docker-compose up`
+`docker-compose up`
 
-    Congraluate! Your server is now up.
+Congraluate! Your server is now up.
 
-    Visit the website via port 3000. (`localhost:3000` if on your own computer)
+Visit the website via port 3000. (`localhost:3000` if on your own computer)
