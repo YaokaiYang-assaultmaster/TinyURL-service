@@ -6,15 +6,16 @@ var UrlModel = require("../models/urlModel");
 var redis = require("redis");
 
 
-//process.env. + 东西是node.js获取环境变量的方法
-//传入环境变量的方法是在: node appname.js REDIS_PORT_6379_TCP_PORT = ...
-//但是此处的两个环境变量docker会自动替我们填写
+// process.env.$var_name是node.js获取环境变量的方法
+// 传入环境变量的方法是在: node appname.js REDIS_PORT_6379_TCP_PORT = ...
+// 但是此处的两个环境变量docker会自动替我们填写
 var port = process.env.REDIS_PORT_6379_TCP_PORT;
 var host = process.env.REDIS_PORT_6379_TCP_ADDR;
 
 var redisClient = redis.createClient(port, host);
 redisClient.flushall();
 
+// Convert a base-62 number into a representation constructed by A-Z, a-z and 0-9.
 var chars = [];
 var genCharArray = function(chars) {
     for (var i = 0; i <= 61; i++) {
@@ -74,7 +75,7 @@ var getShortUrl = function (longUrl, callback) {
 };
 
 
-/* My code for convert decimal to base-62 value */
+/* Code for convert decimal to base-62 value */
 var generateShortUrl = function (callback) {
 
     UrlModel.count({}, function (err, num) {
