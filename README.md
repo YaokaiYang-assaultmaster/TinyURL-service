@@ -21,6 +21,6 @@ Change your directory to `Tiny URL service` and run the following command:
     
 `docker-compose up`
 
-Congraluate! Your server is now up.
+__Voilà!__ Your server is now up!
 
 Visit the website via port 3000. (`localhost:3000` if on your own computer)
